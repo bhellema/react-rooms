@@ -8,10 +8,10 @@ const Header = (props) => {
 			<img src={props.logo} className="App-logo" alt="logo" />
 		</header>
 	)	
-}
+};
 
 Header.propTypes = {
 	title: PropTypes.string.isRequired
-}
+};
 
 export default Header;

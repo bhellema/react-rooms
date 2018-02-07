@@ -1,0 +1,39 @@
+@import '../../css/variables.scss';
+
+$avBackground: lightblue;
+
+.room {
+  cursor: pointer;
+  text-align: left;
+  min-width: 200px;
+  height: 100px;
+  margin: 10px;
+  border: 1px solid black;
+  text-transform: capitalize;
+
+  span {
+    display: block;
+  }
+
+  .name {
+    height: 2rem;
+    line-height: 2rem;
+    border-bottom: 1px solid black;
+    text-align: center;
+    background: $cardBarColor;
+  }
+
+  .seats {
+    padding-top: 10px;
+    padding-left: 10px;
+  }
+
+  &.av {
+    background: $avBackground;
+  }
+
+  &.selected {
+    background: yellow;
+  }
+
+}
