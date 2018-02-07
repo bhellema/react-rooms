@@ -1,0 +1,17 @@
+@import '../../css/variables.scss';
+
+.headerBar {
+	background-color: $barColor;
+	width: 100%;	
+	border-bottom: 1px solid black;
+	border-top: 1px solid black;
+
+	h1 {
+		display: inline-block;
+	}
+
+	img {
+		animation: App-logo-spin infinite 1s linear;
+		height: 40px;
+	}
+}

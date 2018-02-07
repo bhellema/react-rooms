@@ -1,3 +1,8 @@
+## My Links
+ - https://spin.atomicobject.com/2017/06/07/react-state-vs-redux-state/
+ - https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#adding-a-css-preprocessor-sass-less-etc
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
