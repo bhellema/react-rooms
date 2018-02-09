@@ -1,8 +1,15 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 import Room from '../room/Room';
-import rooms from '../../data/rooms';
 import './Rooms.css';
+
+
+const mapStateToProps = (store, ownProps) => {
+    return {
+        rooms: store.rooms
+    }
+};
 
 class Rooms extends React.Component {
 
@@ -10,7 +17,7 @@ class Rooms extends React.Component {
         return (
             <div className='rooms'>
                 {
-                    rooms.map( (room, index) =>
+                    this.props.rooms.map( (room, index) =>
                         <Room key={index} name={room.name} av={room.av} seats={room.seats}/>
                     )
                 }
@@ -19,4 +26,4 @@ class Rooms extends React.Component {
     }
 }
 
-export default Rooms;
+export default connect(mapStateToProps)(Rooms);

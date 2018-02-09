@@ -1,0 +1,17 @@
+[
+  {
+    "name": "slate",
+    "seats": 10,
+    "av": true
+  },
+  {
+    "name": "quackenbush",
+    "seats": 4,
+    "av": false
+  },
+  {
+    "name": "hacksaw",
+    "seats": 4,
+    "av": false
+  }
+]

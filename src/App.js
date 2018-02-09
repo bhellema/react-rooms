@@ -1,21 +1,43 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
+import { connect } from 'react-redux';
 
 import HeaderBar from './components/header/HeaderBar';
-import Rooms from "./components/rooms/Rooms";
-
+import Rooms from './components/rooms/Rooms';
 import logo from './logo.svg';
 import './App.css';
 
+/* Request to load data */
+import {loadRooms} from './actions/rooms.actions';
+
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-            <HeaderBar title="React Rooms" logo={logo}/>
-            <Rooms/>
-      </div>
-    );
-  }
+
+    componentDidMount() {
+        // console.log("------------- componentDidMount ----------------");
+        // this.props.loadRooms();
+    }
+
+    loadRooms() {
+        this.props.loadRooms();
+    }
+
+    render() {
+        return (
+            <div className="App">
+                <button type='button' onClick={() => this.loadRooms()}>Load Rooms</button>
+                <HeaderBar title="React Rooms" logo={logo}/>
+                <Rooms/>
+            </div>
+        );
+    }
 }
 
-export default App;
+const mapDispatchToProps = (dispatch) => {
+    return {
+        loadRooms: () => {
+            dispatch(loadRooms)
+        }
+    }
+};
+
+export default connect(null, mapDispatchToProps)(App);
