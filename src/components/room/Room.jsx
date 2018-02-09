@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import './Room.css';
 
-class Rooms extends React.Component {
+class Room extends React.Component {
 
     state = {
         selected: false
@@ -23,10 +23,10 @@ class Rooms extends React.Component {
     }
 }
 
-Rooms.propTypes = {
+Room.propTypes = {
     name: PropTypes.string.isRequired,
     av: PropTypes.bool,
     seats: PropTypes.number
 };
 
-export default Rooms;
+export default Room;
